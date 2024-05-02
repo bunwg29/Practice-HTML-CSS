@@ -1,0 +1,8 @@
+
+@use "sass:math";
+
+// Function use for set size of a particular items
+
+@function pxToRem($px, $rem: 16) {
+  @return math.div($px, $rem) * 1rem;
+}

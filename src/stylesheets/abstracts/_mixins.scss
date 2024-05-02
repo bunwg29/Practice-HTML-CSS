@@ -1,0 +1,95 @@
+@use './functions';
+@use './variables' as *;
+
+// Mixin for border
+
+@mixin border($border-radius:false, $border: false){
+    @if border-radius != false {
+        border-radius: $border-radius;
+    }
+
+    @if border != false {
+        border: $border;
+    }
+}
+
+// Mixin for color
+
+@mixin color($color: false, $background:false) {
+    @if color != false {
+        color: $color;
+    }
+
+    @if background != false {
+        background-color: $background;
+    }
+}
+
+// Mixin for font
+
+@mixin font($font-family:false, $font-size:false, $font-weight:false, $font-style:false, $line-height:false){
+    @if ($font-family != false) {
+       font-family: $font-family;
+    }
+    @if $font-size{
+        font-size: $font-size; 
+    }
+    
+    @if $font-weight{
+        font-weight: $font-weight;
+    }
+    
+    @if $line-height{
+        line-height: $line-height;
+    }
+}
+
+// Mixin for display property flex
+
+@mixin flex ($display: false, $direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
+    @if display {
+        display: $display;
+    }
+    @if direction {
+        flex-direction: $direction;
+    }
+
+    @if align {
+        align-items: $align;
+    }
+
+    @if justify {
+        justify-content: $justify;
+    }
+
+    @if wrap {
+        text-wrap: $wrap;
+    }
+
+    @if gap {
+        gap: $gap;
+    }
+}
+
+// Mixin for background of particular section
+
+@mixin background ($color){
+    background-color: $color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+// Mixin responsive websites
+
+@mixin tablet {
+    @media (min-width:$small) and (max-width: $tablet) {
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+
