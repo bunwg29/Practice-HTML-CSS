@@ -1,0 +1,245 @@
+// Style rules for box section in a header of page
+@use "../abstracts/" as *;
+.content {
+    width: 100%;
+    @include flex ($display: flex, $direction: column, $gap: 30px);
+
+    @include tablet {
+        @include flex ($display: flex, $justify: center, $direction: row, $gap: 30px);
+    }
+
+    @include desktop {
+        @include flex ($display: flex, $justify: center, $direction: row, $gap: 30px);
+    }
+    // Start setup style for content area 
+    &-area {
+        width: 100%;
+        height: auto;
+        @include flex ($display: flex, $direction: column, $gap: 30px);
+
+        @include tablet {
+            width: 40%;
+            @include flex ($display: flex, $direction: column, $gap: 30px);
+        }
+
+        @include desktop {
+            width: 52%;
+            @include flex ($display: flex, $direction: column, $gap: 30px);
+        }
+
+        &-heading {
+            width: 100%;
+            @include flex ($display: flex, $direction: column, $gap: 10px);
+            
+            @include tablet {
+                @include flex ($display: flex, $direction: column, $gap: 20px);
+            }
+
+            @include desktop {
+                @include flex ($display: flex, $direction: column, $gap: 20px);
+            }
+
+            &__firstline {
+                @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
+
+                @include tablet {
+                    @include font ($font-family: $primary-font, $font-size: pxToRem(38), $font-weight: 600, $line-height: 45.6px);
+                }
+
+                @include desktop {
+                    @include font ($font-family: $primary-font, $font-size: pxToRem(67), $font-weight: 600, $line-height: 73.7px);
+                }
+            }
+
+            &__secondline {
+                @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+
+                @include tablet {
+                    @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+                }
+
+                @include desktop {
+                    @include font ($font-family: $primary-font, $font-size: pxToRem(22), $font-weight: 400, $line-height: 35.2px);
+                }
+            }
+        }
+
+        // Button in hero section at tablet, desktop 
+        &-button {
+            display: none;
+
+            @include tablet {
+                width: 60%;
+                @include flex ($display: flex);
+            }
+
+            @include desktop {
+                width: 49%;
+                @include flex ($display: flex);
+            }
+        }
+
+        // Additional information in hero box (bottom) at tablet, desktop
+        &-bottom {
+            display: none;
+
+            @include tablet {
+                @include flex ($display: flex, $gap: 30px);
+            }
+
+            @include desktop {
+                @include flex ($display: flex, $gap: 30px);
+            }
+
+            &-h {
+                width: 100%;
+                &__h4 {
+                    @include font ($font-family: $fourth-font, $font-size: pxToRem(22), $font-weight: 700, $line-height: 35.2px);
+                    
+                    @include desktop {
+                        @include font ($font-family: $fourth-font, $font-size: pxToRem(28), $font-weight: 700, $line-height: 39.2px);
+                    }
+                }
+    
+                &__p1 {
+                    @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+    
+                    @include desktop {
+                        @include font ($font-family: $fourth-font, $font-size: pxToRem(20), $font-weight: 400, $line-height: 38.38px);
+                    }
+                }
+            }
+        }
+
+        // Hightlight area in hero section at mobiles
+        &-hightlight {
+            width: 100%;
+
+            &__image {
+                img, source {
+                    width: 100%;
+                }
+                
+            }
+
+            @include tablet {
+                display: none;
+            }
+
+            @include desktop {
+                display: none;
+            }
+
+            &__avt {
+                padding: 20px;
+                @include flex ($display: flex, $direction: column, $gap: 12px);
+                @include border ($border-radius: 0px 0px 20px 20px);
+                @include color ($background: #3B3B3B);
+                @include font ($font-family: $primary-font);
+                h5 {
+                    @include font ($font-size: pxToRem(22), $font-weight:600, $line-height: 30.8px);
+                }
+                &-cap {
+                    @include flex ($display: flex, $align: center, $gap: 12px);
+    
+                    p {
+                        @include font ($font-size: pxToRem(16), $font-weight:400, $line-height: 22.4px);
+                    }
+                }
+            }
+
+        }
+    }
+
+    // Hightlight area in hero section at tablet, desktop
+    &-hightlight__td {
+        display: none;          
+
+        @include tablet {
+            width: 40%;
+            @include flex ($display: flex, $direction: column);
+        }
+
+        @include desktop {
+            width: 52%;
+            @include flex ($display: flex, $direction: column);
+        }
+
+
+        &__image {
+            img, source {
+                width: 100%;
+            }
+            
+        }
+
+        &__avt {
+            padding: 20px;
+            @include flex ($display: flex, $direction: column, $gap: 12px);
+            @include border ($border-radius: 0px 0px 20px 20px);
+            @include color ($background: #3B3B3B);
+            @include font ($font-family: $primary-font);
+            h5 {
+                @include font ($font-size: pxToRem(22), $font-weight:600, $line-height: 30.8px);
+            }
+            &-cap {
+                @include flex ($display: flex, $align: center, $gap: 12px);
+
+                p {
+                    @include font ($font-size: pxToRem(16), $font-weight:400, $line-height: 22.4px);
+                }
+            }
+        }
+
+    
+    }
+
+    // Finishing set style for content area
+
+    // Start set style for button for mobiles
+    &-button {
+        width: 100%;
+        height: 60px;
+        @include flex ($display: flex, $align: center, $gap: 12px);
+
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    // Bottom for mobiles
+    &-bottom {
+        width: 100%;
+        @include flex ($display:flex, $gap: 30px);
+
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+        &-h {
+            width: 100%;
+            &__h4 {
+                @include font ($font-family: $fourth-font, $font-size: pxToRem(22), $font-weight: 700, $line-height: 35.2px);
+                
+                @include desktop {
+                    @include font ($font-family: $fourth-font, $font-size: pxToRem(28), $font-weight: 700, $line-height: 39.2px);
+                }
+            }
+
+            &__p1 {
+                @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+
+                @include desktop {
+                    @include font ($font-family: $fourth-font, $font-size: pxToRem(24), $font-weight: 400, $line-height: 38.38px);
+                }
+            }
+        }
+    }
+}

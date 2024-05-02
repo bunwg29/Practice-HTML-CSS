@@ -60,6 +60,32 @@
 
     // Finish of setup style rules for navigation
 
+    // Start setup style rules for hero section in header area
+
+    .header-bottom {
+        
+        width: 100%;
+        padding: 40px 0px;
+
+        @include flex ($display: flex, $direction: column, $align: center, $gap: 30px);
+
+        @include tablet {
+            padding: 80px 0px;
+            @include flex ($display: flex, $direction: row, $justify: center, $align: center, $gap: 30px);
+        }
+
+        @include desktop {
+            padding: 80px 195px;
+            @include flex ($display: flex, $direction: row, $justify: center, $align: center, $gap: 30px);
+        }
+        
+        &__box {
+            width: 84%;
+        }
+    }
+     
+    // Finishing setup style rules for hero section in header area
+
 }
 
 // Finishing setup style rules for the header section
