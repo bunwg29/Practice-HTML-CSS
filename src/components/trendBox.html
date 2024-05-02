@@ -1,0 +1,128 @@
+<!-- Trending section in page -->
+
+<each loop="item in {{ list }}">
+    
+    <!-- Create container of trending collection include three box -->
+
+    <div class="trending-container">
+
+       <!-- Title of content -->
+
+        <div class="title">
+            <h4>Trending Collection</h4>
+            <p>Checkout our weekly updated trending collection.</p>    
+        </div>
+
+        <!-- Start box class -->
+
+        <div class="box">
+            
+            <!-- First item image -->
+
+            <div class="first-box">
+                <picture class="first-box-primary">
+                    <source media="screen and (min-width: 700px)" srcset="../assets/img/pic-trending-collection/{{ item.imageDogTD }}.png">
+                    <source media="(min-width:350px)" srcset="../assets/img/pic-trending-collection/{{ item.imageDogM }}.png">
+                    <img src="../assets/img/pic-trending-collection/{{ item.imageDogM }}.png"> 
+                </picture>
+
+                <div class="small-items">
+
+                    <picture>
+                        <source media="screen and (min-width: 700px)" srcset="../assets/img/pic-trending-collection/{{ item.imageCatTD }}.png">
+                        <source media="(min-width:350px)" srcset="../assets/img/pic-trending-collection/{{ item.imageCatM }}.png">
+                        <img src="../assets/img/pic-trending-collection/{{ item.imageCatM }}.png"> 
+                    </picture>
+
+                    <picture>
+                        <source media="screen and (min-width: 700px)" srcset="../assets/img/pic-trending-collection/{{ item.imageBearTD }}.png">
+                        <source media="(min-width:350px)" srcset="../assets/img/pic-trending-collection/{{ item.imageBearM }}.png">
+                        <img src="../assets/img/pic-trending-collection/{{ item.imageBearM }}.png"> 
+                    </picture>
+
+                    <div class="mini-box">
+                        <p>1025+</p>
+                    </div>
+
+                </div>
+
+                <div class="details-item">
+                    <h5>DSGN Animals</h5>
+                    <div class="details-item-avt">
+                        <img src="../assets/img/pic-top-creator/{{item.avtDesc1}}.png">
+                        <p>MrFox</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Second item image -->
+            <div class="second-box">
+                <picture class="first-box-primary">
+                    <img class="primary-image2" src="../assets/img/pic-trending-collection/{{ item.imageMushroom }}.png"> 
+                </picture>
+
+                <div class="small-items">
+
+                    <picture>
+                        <img src="../assets/img/pic-trending-collection/{{ item.mushroom_1 }}.png"> 
+                    </picture>
+
+                    <picture>
+                        <img src="../assets/img/pic-trending-collection/{{ item.mushroom_2 }}.png"> 
+                    </picture>
+
+                    <div class="mini-box">
+                        <p>1025+</p>
+                    </div>
+
+                </div>
+
+                <div class="details-item">
+                    <h5>Magic Mushrooms</h5>
+                    <div class="details-item-avt">
+                        <img src="../assets/img/pic-top-creator/{{ item.avtDesc2 }}.png">
+                        <p>Shroomie</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Third item image -->
+            <div class="third-box">
+                <picture class="first-box-primary">
+                    <img class="primary-image2" src="../assets/img/pic-trending-collection/{{ item.imageRobot }}.png"> 
+                </picture>
+
+                <div class="small-items">
+
+                    <picture>
+                        <img src="../assets/img/pic-trending-collection/{{ item.robot_1 }}.png"> 
+                    </picture>
+
+                    <picture>
+                        <img src="../assets/img/pic-trending-collection/{{ item.robot_2 }}.png"> 
+                    </picture>
+
+                    <div class="mini-box">
+                        <p>1025+</p>
+                    </div>
+
+                </div>
+
+                <div class="details-item">
+                    <h5>Disco Machines</h5>
+                    <div class="details-item-avt">
+                        <img src="../assets/img/pic-top-creator/{{ item.avtDesc3 }}.png">
+                        <p>BeKind2Robots</p>
+                    </div>
+                    
+                </div>
+            </div>
+         
+        </div>
+        <!-- End of box class-->
+
+    </div>
+<!-- End of trending content -->
+</each>
