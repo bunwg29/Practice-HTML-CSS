@@ -1,0 +1,37 @@
+<!-- Start header -->
+
+<header class="header-container">
+
+    <!-- Start header top -->
+    <div class="header-top">
+        <div class="header-top__logo">
+            <figure>
+                <img src="../assets/icon/ic-store-front.svg" alt="ic-store-front">
+                <figcaption>NFT Marketplace</figcaption>
+            </figure>
+        </div>
+
+        <nav class="nav-container">
+            <ul>
+                <include src="./components/navList.html" locals='{
+                    "classList":"nav__item",
+                    "classLink":"nav__item-link",
+                    "list":["Marketplace","Rankings","Connect a wallet"]
+                }'>
+                </include>
+
+                <div class="header-top__button">
+                    <button class="header-top__button-s"><img src="../assets/icon/ic-user.svg" alt="logo-sign-up">Sign Up</button>
+                </div>
+            </ul>
+        </nav> 
+
+        <div class="header-top__menu">
+            <figure class="header-top__menu-item">
+                <img src="../assets/icon/ic-nav-tablet-phone.svg" alt="menu">
+            </figure>
+        </div>
+    </div>
+    <!-- End of header top -->
+</header>
+<!-- End of header -->
