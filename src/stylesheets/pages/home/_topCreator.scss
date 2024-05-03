@@ -1,0 +1,10 @@
+@use "abstracts/" as *;
+
+.top-creator {
+    @include flex ($display: flex, $direction: column, $align: center, $gap: 40px);
+    align-self: stretch;
+    height: auto;
+    mix-blend-mode: normal;
+    padding: 40px 195px;
+    position: relative;
+}

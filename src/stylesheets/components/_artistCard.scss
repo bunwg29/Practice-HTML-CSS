@@ -1,0 +1,62 @@
+@use "../abstracts/" as *;
+
+.card-container {
+    width: 100%;
+    @include flex ($display: flex, $direction: column, $align: flex-start, $gap: 20px);
+    background-color: transparent;
+    position: relative;
+    width: 315px;
+    height: auto;
+
+    .card-1, .card-2, .card-3, .card-4, .card-5 {
+        @include flex ($display: flex, $align: flex-start, $gap: 20px);
+        align-self: stretch;
+        padding: 20px;
+        position: relative;
+        border-radius: 20px;
+        @include color ($background: #3B3B3B);
+        
+    }
+
+    .right-card {
+        @include flex ($display: flex, $align: flex-start);
+        position: relative;
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .left-card {
+        @include flex ($display: flex, $direction: column, $gap: 5px);
+        h5 {
+            @include font ($font-family: $primary-font, $font-size: pxToRem(22), $font-weight: 600, $line-height: 30.8px);
+            @include color ($color: #FFFFFF);
+        }
+
+        &-describe {
+            &__p1 {
+                @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+                @include color ($color: #858584);
+            }
+            
+            &__p2 {
+                @include font ($font-family: $fourth-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+                @include color ($color: #FFFFFF);
+            }
+
+            @include flex ($display: flex, $gap: 5px);
+        }
+    }
+
+    .circle {
+            width: 30px;
+            height: 30px;
+            background-color: #2B2B2B;
+            border-radius: 20px;
+            position: absolute;
+            top: 12px;
+            left: 13px;
+            @include flex ($display: flex, $align: center, $justify: center);
+    }
+}
