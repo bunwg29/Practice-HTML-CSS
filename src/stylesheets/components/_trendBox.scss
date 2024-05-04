@@ -151,5 +151,14 @@
             }
         }
     }
-   
+
+    .first-box-primary, .small-items_1, .mini-box, .avt-mini {
+        // Effect of items
+    & {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    &:hover {
+        transform: scale(0.9);
+    }
+    }
 }
