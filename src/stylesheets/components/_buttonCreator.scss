@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+
+// Set style rules for button in top creator content of page
+.button {
+    height: 60px;
+    width: 100%;
+    @include flex ($display: flex, $direction: row, $align: center, $justify: center, $gap: 12px);
+    @include color ($color: #FFFFFF, $background: transparent);
+    @include border ($border: 2px, $border-radius: 20px);
+    border-style: solid;
+    border-color: #A259FF;   
+
+    p {
+        text-wrap: nowrap;
+        @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 600, $line-height: 22.4px);
+    }
+    
+    @include tablet {
+        padding: 0px 50px;
+        @include flex ($display: flex, $direction: row, $align: center, $gap: 12px);
+    }
+
+    @include desktop {
+        padding: 0px 50px;
+        @include flex ($display: flex, $direction: row, $align: center, $gap: 12px);
+    }
+
+    // Effect of button
+    & {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    &:hover {
+        transform: scale(0.9);
+    }
+}

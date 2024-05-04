@@ -1,6 +1,52 @@
 @use "../abstracts/" as *;
 
+// Set style rules for heading content containing: heading and button
+
+.heading {
+    width: 315px;
+    
+    color: #FFFFFF;
+
+    @include tablet {
+        position: relative;
+        width: 690px;
+        @include flex ($display: flex, $direction: row, $align: flex-end, $gap: 100px);
+    }
+
+    @include desktop {
+        position: relative;
+        width: 1050px;
+        @include flex ($display: flex, $direction: row, $align: flex-end, $justify: space-between, $gap: 100px);
+    }
+
+    .text {
+        @include flex ($display: flex, $direction: column, $align: flex-start, $gap: 10px);
+        h4 {
+            @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
+        }
+    
+        p {
+            @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4  px);
+        }
+    }
+
+    .button-TD {
+        display: none;
+
+        @include tablet {
+            @include flex ($display: flex, $direction: row, $align: center, $gap: 12px);
+        }
+    
+        @include desktop {
+            @include flex ($display: flex, $direction: row, $align: center, $gap: 12px);
+        }
+    
+    }
+
+}
+// Set style rules for card-container
 .card-container {
+    // In mobile mode
     width: 100%;
     @include flex ($display: flex, $direction: column, $align: flex-start, $gap: 20px);
     background-color: transparent;
@@ -8,25 +54,99 @@
     width: 315px;
     height: auto;
 
-    .card-1, .card-2, .card-3, .card-4, .card-5 {
+    // In tablet mode
+    @include tablet {
+        width: 690px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    // In desktop mode
+    @include desktop {
+        width: 1050px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+    
+    // Style rules for first 5 cards
+    .card-1, .card-2, .card-3, .card-4, .card-5, .card-6, .card-7, .card-8, .card-9, .card-10, .card-11, .card-12  {
         @include flex ($display: flex, $align: flex-start, $gap: 20px);
         align-self: stretch;
         padding: 20px;
         position: relative;
         border-radius: 20px;
         @include color ($background: #3B3B3B);
+
+        @include desktop {
+            width: 240px;
+
+            @include flex ($display: flex, $direction: column);
+            align-items: center;
+        }
         
+        & {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        &:hover {
+            transform: scale(0.9);
+        }
     }
 
-    .right-card {
+    // Style rules for 6th card.
+    .card-6 {
+        display: none;
+
+        @include tablet {
+            @include flex ($display: flex, $align: flex-start, $gap: 20px);
+            align-self: stretch;
+            padding: 20px;
+            position: relative;
+            border-radius: 20px;
+            @include color ($background: #3B3B3B);
+        }
+
+        @include desktop {
+            border-radius: 20px;
+            padding: 20px;
+            @include color ($background: #3B3B3B);
+            @include flex ($display: flex, $direction: column, $align: center, $gap: 20px);
+            width: 240px;
+        }
+    }
+
+    // Style rules for next 6 cards use in desktop mode
+    .card-7, .card-8, .card-9, .card-10, .card-11, .card-12 {
+        display: none;
+
+        @include desktop {
+            border-radius: 20px;
+            padding: 20px;
+            @include color ($background: #3B3B3B);
+            width: 240px;
+            @include flex ($display: flex, $direction: column, $align: center, $gap: 20px);
+        }
+    }
+
+    // Style rules for content in each cards
+
+    // Right content of card
+    .right-card_1 {
         @include flex ($display: flex, $align: flex-start);
         position: relative;
         img {
             width: 60px;
             height: 60px;
+
+            @include desktop {
+                width: 110px;
+                height: 120px;
+            }
         }
     }
 
+    // Left content of card
     .left-card {
         @include flex ($display: flex, $direction: column, $gap: 5px);
         h5 {
@@ -49,6 +169,7 @@
         }
     }
 
+    // Counting circle of each cards
     .circle {
             width: 30px;
             height: 30px;
@@ -58,5 +179,21 @@
             top: 12px;
             left: 13px;
             @include flex ($display: flex, $align: center, $justify: center);
+    } 
+}
+
+// Set style rules for button mobile
+.button-mobile {
+    width: 100%;
+    @include flex ($display: flex, $direction: row, $align: center, $justify: center, $gap: 100px);
+
+    @include tablet {
+        display: none;
+    }
+
+    @include desktop {
+        display: none;
     }
 }
+
+// Finish set style rules for card container
