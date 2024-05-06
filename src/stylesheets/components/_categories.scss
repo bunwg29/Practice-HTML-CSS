@@ -1,0 +1,184 @@
+@use "../abstracts/" as *;
+// Setup style rule for heading of this content
+
+.heading {
+    width: 315px;
+    color: #FFFFFF;
+    p {
+        @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
+    }
+    @include tablet {
+        width: 690px;
+    }
+
+    @include desktop {
+        width: 1050px;
+    }
+}
+// Setup style rules for card of categories section
+.categories-container {
+    width: 315px;
+    height: 918px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-template-rows: repeat(3, auto) 231px;
+
+    @include tablet {
+        width: 690px;
+        height: 470px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 209px 231px;
+        grid-gap: 20px;
+    }
+
+    @include desktop {
+        width: 1050px;
+        height: 662px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+
+    // First 4 card
+    .card {
+
+        @include tablet {
+            width: 150px;
+        }
+        @include desktop {
+            height: 316px;
+            width: 240px;
+        }
+
+        & {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        &:hover {
+            transform: scale(0.9);
+            -webkit-transform: scale(0.9);
+        }
+    }
+    
+    // Next 4 card
+    .card-1 {
+        height: 209px;
+        @include flex ($display: flex, $direction: column);
+        position: relative;
+        
+        @include border ($border-radius: 20px);
+        @include tablet {
+            background-color: #3B3B3B;
+            height: 231px;
+            width: 150px;
+        }
+
+        @include desktop {
+            background-color: #3B3B3B;
+            height: 316px;
+            width: 240px;
+        }
+        & {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        &:hover {
+            transform: scale(0.9);
+            -webkit-transform: scale(0.9);
+        }
+    }
+
+    // 7th card: Specical card to design in three responsive mode
+    .card-7 {
+        @include border ($border-radius: 20px);
+        background-color: #3B3B3B;
+        & {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        &:hover {
+            transform: scale(0.9);
+            -webkit-transform: scale(0.9);
+        }
+    }
+
+    .top-content {
+        height: 142px;
+        min-width: 147.5px;
+        position: relative;
+        @include desktop {
+            height: 240px;
+            width: 240px;
+        }
+        .image {
+            height: 142px;
+            min-width: 147.5px;
+
+            img {
+                position: absolute;
+                height: 142px;
+                min-width: 147.5px;
+                filter: blur(2px);
+                -webkit-filter: blur(2px);
+                @include tablet {
+                    height: 142px;
+                    min-width: 150px;
+                }
+
+                @include desktop {
+                    height: 240px;
+                    width: 240px;
+                }
+            } 
+        }
+
+        .icon {
+            height: 100%;
+            min-width: 147.5px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            @include flex ($display: flex, $align: center, $justify: center);
+            @include tablet {
+                width: 150px;
+                height: 100%;
+            }
+
+            @include desktop {
+                height: 240px;
+                width: 240px;
+            }
+            
+            img {   
+                width: 80px;
+                height: 80px;
+
+                @include desktop {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+    // Setup style rules for bottom content
+    .bottom-content {
+        padding: 20px 20px 25px 20px;
+        background-color: #3B3B3B;
+        @include border ($border-radius: 0px 0px 20px 20px);
+ 
+        @include desktop {
+            padding: 20px 30px 25px 30px;
+        }
+
+        p {
+            color: #FFFFFF;
+            @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: (600), $line-height: 22.4px);
+            @include desktop {
+                @include font ($font-family: $primary-font, $font-size: pxToRem(22), $font-weight: (600), $line-height: 30.8px);
+            }
+        }
+    }
+}
