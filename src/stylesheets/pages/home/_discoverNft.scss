@@ -1,0 +1,14 @@
+@use "abstracts/" as *;
+
+.discover {
+    padding: 40px, 0px, 60px, 0px;
+    @include flex ($display: flex, $direction: column, $justify: center, $align: center, $gap: 40px);
+
+    @include tablet {
+        padding: 40px 195px;
+    }
+
+    @include desktop {
+        padding: 80px 195px;
+    }
+}
