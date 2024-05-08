@@ -31,7 +31,7 @@
 // Setup style rules cards in a disvover Nfts section
 .card-discover-container {
     @include flex ($display: flex, $direction: column, $gap: 40px);
-
+    padding: 40px 0px 60px 0px;
     @include tablet {
         width: 690px;
         @include flex ($display: flex, $direction: row, $gap: 30px);
