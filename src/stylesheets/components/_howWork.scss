@@ -1,0 +1,127 @@
+@use "../abstracts/" as *;
+// Setup style rules for heading
+
+.heading {
+    @include flex ($display: flex, $direction: column, $gap: 10px);
+
+    h4 {
+        @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
+    }
+
+    p {
+        @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+    }
+
+    @include tablet {
+        align-items: flex-start;
+    }
+
+    @include desktop {
+        align-items: flex-start;
+        h4 {
+            @include font ($font-family: $primary-font, $font-size: pxToRem(38), $font-weight: 600, $line-height: 45.6px);
+        }
+         p {
+            @include font ($font-family: $primary-font, $font-size: pxToRem(22), $font-weight: 400, $line-height: 35.2px);
+         }
+    }
+}
+// Setup style rules for card of how it works section
+.how-it-works-card {
+    width: 315px;
+   
+    @include flex ($display: flex, $direction: column, $gap: 20px);
+
+    // In tablet mode
+    @include tablet {
+        width: 690px;
+        height: 337px;
+        @include flex ($display: flex, $direction: row, $gap: 30px);
+    }
+
+    // In desktop mode
+    @include desktop {
+        width: 1050px;
+        height: 439px;
+        @include flex ($display: flex, $direction: row, $gap: 30px);
+    }
+
+    // Setup style rules for info card
+    .info-card {
+        // In mobile mode
+        width: 315px;
+        height: 157px;
+        padding: 20px;
+        &:nth-child(2) {
+            height: 140px;
+        }
+        @include background (#3B3B3B);
+        @include border ($border-radius: 20px); 
+        @include flex ($display: flex, $direction: row, $justify: space-between, $align: center, $gap: 20px);
+        
+        // In mobile mode
+        @include tablet {
+            padding: 10px 20px 30px;
+            height: 100%;
+            &:nth-child(2) {
+                height: 100%;
+            }
+            @include flex ($display: flex, $direction: column, $gap: 20px);
+        }
+
+        @include desktop {
+            padding: 10px 30px 30px;
+            height: 100%;
+            width: 330px;
+            &:nth-child(2) {
+                height: 100%;
+            }
+            @include flex ($display: flex, $direction: column, $gap: 20px);
+        }
+        picture {
+            img {
+                width: 100px;
+                height: 100px;
+
+                @include tablet {
+                    width: 160px;
+                    height: 160px;
+                }
+
+                @include desktop {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+
+        .info-card-content {
+            @include flex ($display: flex, $direction: column, $align: center, $gap: 10px);
+            @include color ($color: #FFFFFF);
+            h5 {
+                @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 600, $line-height: 22.4px);
+                @include desktop {
+                    @include font ($font-family: $primary-font, $font-size: pxToRem(22), $font-weight: 600, $line-height: 30.8px);
+                }
+            }
+
+            p {
+                text-align: center;
+                @include font ($font-family: $primary-font, $font-size: pxToRem(12), $font-weight: 400, $line-height: 16.8px);
+                @include desktop {
+                    @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+                }
+            }
+        }
+
+        // Effect
+        & {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        &:hover {
+            transform: scale(0.9);
+            -webkit-transform: scale(0.9);
+        }
+    }
+}
