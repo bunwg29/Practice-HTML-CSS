@@ -1,0 +1,16 @@
+@use "abstracts/" as *;
+
+// Setup style rules for subscribe widget section
+
+.subscribe-widget {
+    padding: 40px 0px;
+    @include flex ($display: flex, $direction: column, $justify: center, $align: center, $gap: 40px);
+
+    @include tablet {
+        padding: 40px 30px;
+    }
+
+    @include tablet {
+        padding: 60px;
+    }
+}

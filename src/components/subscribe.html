@@ -1,0 +1,27 @@
+<each loop="item in {{ list }}">
+    <div class="subscribe-container">
+        <picture class="image-space">
+            <source media="screen and (min-width: 1200px)" srcset="../assets/img/{{ item.imageDesktop }}.png">
+            <source media="(min-width:429px)" srcset="../assets/img/{{ item.imageTablet }}.png">
+            <img src="../assets/img/{{ item.imageMobile }}.png"> 
+        </picture>
+
+        <div class="content">
+            <div class="content-heading">
+                <h4>Join our Weekly Digest</h4>
+                <p>Get exclusive promotions & updates straight to your inbox.</p>
+            </div>
+
+            
+            <div class="form">
+                <input type="text" placeholder="Enter Your Email Address">
+                <input class="input-desktop" type="text" placeholder="Enter your email here">
+                <div class="button">
+                    <img src="../assets/icon/{{ item.iconButton }}.svg" alt="">
+                    <p>Subscribe</p>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+</each>
