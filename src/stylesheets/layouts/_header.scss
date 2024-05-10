@@ -3,14 +3,14 @@
 // Start setup style rules for the header section
 .header-container {
     width: 100%;
-    @include color ($color:$text-color-varables, $background:$background-color);
+    @include color ($color: $text-color-varables, $background: $background-color);
 
     // Start setup style rules for navigation
 
     .header-top {
         width: 100%;
         padding: 15px 30px;
-        @include flex ($display:flex, $justify: space-between, $align: center);
+        @include flex ($justify: space-between, $align: center);
         
         @include tablet{
             padding: 15px 50px;
@@ -24,7 +24,7 @@
         &__logo{
             figure {
                 margin: 0;
-                @include flex ($display:flex,$align: center, $gap: 15px);
+                @include flex ($align: center, $gap: 15px);
                 @include font ($font-family: $fourth-font, $font-size: 20px, $font-weight: 650);
             }
 
