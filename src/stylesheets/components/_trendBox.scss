@@ -4,14 +4,16 @@
 
 .trending-container {
 
-    width: 100%;
+    width: 315px;
     @include flex ($align: center, $direction: column, $gap: 40px);
 
     @include tablet {
+        width: 690px;
         @include flex ($align: center, $direction: column, $gap: 40px);
     }
 
     @include desktop {
+        width: 1050px;
         @include flex ($align: center, $direction: column, $gap: 60px);
     }
     
