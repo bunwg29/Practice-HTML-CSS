@@ -5,7 +5,7 @@
     height: 60px;
     padding: 0px 50px;
    
-    @include flex ($display: flex, $align: center, $justify: center, $gap: 12px);
+    @include flex ($align: center, $justify: center, $gap: 12px);
     @include color ($color: #FFFFFF, $background: #A259FF);
     @include border ($border: 0px, $border-radius: 20px);
     text-wrap: nowrap;
@@ -15,11 +15,5 @@
         
     }
     
-    // Transition of button in hero sections
-    & {
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
-    &:hover {
-        transform: scale(1.1);
-    }
+    @include effect();
 }

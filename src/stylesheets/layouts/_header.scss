@@ -63,24 +63,19 @@
     // Start setup style rules for hero section in header area
 
     .header-bottom {
-        
+        position: relative;
         width: 100%;
         padding: 40px 0px;
-
-        @include flex ($display: flex, $direction: column, $align: center, $gap: 30px);
-
+        @include flex ($direction: row, $align: center, $justify: center, $gap: 30px);
+       
         @include tablet {
             padding: 80px 0px;
-            @include flex ($display: flex, $direction: row, $justify: center, $align: center, $gap: 30px);
+            @include flex ($direction: row, $justify: center, $align: center, $gap: 30px);
         }
 
         @include desktop {
             padding: 80px 195px;
-            @include flex ($display: flex, $direction: row, $justify: center, $align: center, $gap: 30px);
-        }
-        
-        &__box {
-            width: 84%;
+            @include flex ($direction: row, $justify: center, $align: center, $gap: 30px);
         }
     }
      
