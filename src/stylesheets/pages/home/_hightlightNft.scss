@@ -1,0 +1,8 @@
+@use "abstracts/" as *;
+
+.hightlight {
+    position: relative;
+    @include flex ($direction: column, $justify: center, $align: center);
+
+    
+}
