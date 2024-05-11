@@ -4,20 +4,22 @@
 
 .trending-container {
 
-    width: 100%;
-    @include flex ($display: flex, $align: center, $direction: column, $gap: 40px);
+    width: 315px;
+    @include flex ($align: center, $direction: column, $gap: 40px);
 
     @include tablet {
-        @include flex ($display: flex, $align: center, $direction: column, $gap: 40px);
+        width: 690px;
+        @include flex ($align: center, $direction: column, $gap: 40px);
     }
 
     @include desktop {
-        @include flex ($display: flex, $align: center, $direction: column, $gap: 60px);
+        width: 1050px;
+        @include flex ($align: center, $direction: column, $gap: 60px);
     }
     
     .title {
         width: 315px;
-        @include flex ($display: flex, $justify: center, $direction: column, $gap: 10px);
+        @include flex ($justify: center, $direction: column, $gap: 10px);
         @include color ($color: $text-color-varables);
 
         @include tablet {
@@ -49,21 +51,23 @@
 
     .box {
 
-        width: 100%;
-        @include flex ($display: flex, $justify: center);
+        width: 315px;
+        @include flex ($justify: center);
 
         @include tablet {
-            @include flex ($display: flex, $gap: 30px);
+            width: 690px;
+            @include flex ($gap: 30px);
         }
 
         @include desktop {
-            @include flex ($display: flex, $gap: 30px);
+            width: 1050px;
+            @include flex ($gap: 30px);
         }
 
 
         .first-box {
              width: 315px;
-             @include flex ($display: flex, $direction: column, $gap: 30px);
+             @include flex ($direction: column, $gap: 30px);
         }
 
         .second-box {
@@ -78,12 +82,12 @@
 
             .second-box {
                 width: 330px;
-                @include flex ($display: flex, $direction: column, $gap: 15px);
+                @include flex ($direction: column, $gap: 15px);
             }
 
             .first-box {
                 width: 330px;
-                @include flex ($display: flex, $direction: column, $gap: 15px);
+                @include flex ($direction: column, $gap: 15px);
            }
 
         }
@@ -91,27 +95,27 @@
         @include desktop {
             .second-box {
                 width: 330px;
-                @include flex ($display: flex, $direction: column, $gap: 30px);
+                @include flex ($direction: column, $gap: 30px);
             }
 
             .third-box {
                 width: 330px;
-                @include flex ($display: flex, $direction: column, $gap: 30px);
+                @include flex ($direction: column, $gap: 30px);
             }
         }
 
         .first-box-primary {
-            @include flex ($display: flex, $justify: center);
+            @include flex ($justify: center);
         }
        
         // Style items in a box: each iteam have a same style.
         .small-items {
             width: 315px;
-            @include flex ($display: flex, $justify: center, $gap: 15px);
+            @include flex ($justify: center, $gap: 15px);
             .mini-box {
                 width: 95px;
                 height: 95px;
-                @include flex ($display: flex, $justify: center, $align: center);
+                @include flex ($justify: center, $align: center);
                 @include border ($border-radius: 20px);
                 @include color ($color: #FFFFFF, $background: #A259FF);
                 @include font ($font-family: $fourth-font, $font-size: pxToRem(16), $font-weight: 700, $line-height: 22.4px);
@@ -129,7 +133,7 @@
         }
 
         .details-item {
-            @include flex ($display: flex, $direction: column, $gap: 10px);
+            @include flex ($direction: column, $gap: 10px);
             @include color ($color: $text-color-varables);
             
             h5 {
@@ -137,7 +141,7 @@
             }
             &-avt {
                 
-                @include flex ($display: flex, $gap: 12px);
+                @include flex ($gap: 12px);
                 img {
                     width: 24px;
                     height: 24px;
@@ -153,12 +157,6 @@
     }
 
     .first-box-primary, .small-items_1, .mini-box, .avt-mini {
-        // Effect of items
-    & {
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
-    &:hover {
-        transform: scale(0.9);
-    }
+        @include effect();
     }
 }

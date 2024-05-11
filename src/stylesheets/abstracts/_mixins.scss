@@ -46,10 +46,9 @@
 
 // Mixin for display property flex
 
-@mixin flex ($display: false, $direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
-    @if display {
-        display: $display;
-    }
+@mixin flex ($direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
+
+    display: flex;
     @if direction {
         flex-direction: $direction;
     }
@@ -79,7 +78,18 @@
     background-position: center;
     background-size: cover;
 }
+// Mixin effect of items 
 
+@mixin effect () {
+    & {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    &:hover {
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+    }
+}
 // Mixin responsive websites
 
 @mixin tablet {
