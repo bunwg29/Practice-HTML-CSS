@@ -1,0 +1,116 @@
+<!-- Make a box content in a hero section of header area -->
+
+
+<each loop="item in {{ list }}">
+    <!-- Start of content in a box containing 3 parts: content area, button and bottom-->
+        <div class="content">
+            <!-- Make a content area in a box -->
+
+            <div class="content-area">
+                <div class="content-area-heading">
+                    <h1 class="content-area-heading__firstline">{{ item.firstLine }}</h1>
+                    <p class="content-area-heading__secondline">{{ item.secondLine }}</p>
+                </div>
+                
+                <!-- Button in tablet and desktop -->
+
+                <div class="content-area-button">
+                    <include src="./components/button.html" locals='{
+                        "list":[{"linkIcon":"{{ item.buttonLink }}", "content":"{{ item.buttonContent }}"}]
+                    }'>
+                    </include>
+                </div>
+    
+                <!-- Finishing button -->
+    
+                <!-- Make the content - bottom of a box in a tablet and desktop -->
+                <div class="content-area-bottom">
+                    <div class="content-area-bottom-h">
+                        <h4 class="content-area-bottom-h__h4">{{ item.heading1 }}</h4>
+                        <p class="content-area-bottom-h__p1">{{ item.p1 }}</p>
+                    </div>
+                    
+                    <div class="content-area-bottom-h">
+                        <h4 class="content-area-bottom-h__h4">{{ item.heading2}}</h4>
+                        <p class="content-area-bottom-h__p1">{{ item.p2 }}</p>
+                    </div>
+    
+                    <div class="content-area-bottom-h">
+                        <h4 class="content-area-bottom-h__h4">{{ item.heading3 }}</h4>
+                        <p class="content-area-bottom-h__p1">{{ item.p3 }}</p>
+                    </div>
+                </div>
+    
+                <!-- Hightlight area at mobile view -->
+                <div class="content-area-hightlight">
+                    <picture class="content-area-hightlight__image">
+                        <source class="content--area-hightlight__image-top2" media="screen and (min-width:1280px)" srcset="../assets/img/{{ item.imageLink3 }}.png" alt="{{ item.imageDesc3 }}"/> 
+                        <source class="content-area-hightlight__image-top1" media="(min-width:834px)" srcset="../assets/img/{{ item.imageLink2 }}.png" alt="{{ item.imageDesc2 }}"/> 
+                        <img class="content-area-hightlight__image-top" src="../assets/img/{{ item.imageLink1 }}.png" alt="{{ item.imageDesc1 }}">
+                    </picture>
+    
+                    <div class="content-area-hightlight__avt">
+                        <h5>Space Working</h5>
+    
+                        <div class="content-area-hightlight__avt-cap">
+                            <img class="content-area-hightlight__avt-i" src="../assets/img/{{ item.imageAvatar }}.png" alt="item.imageDesc4">
+                            <p class="content-area-hightlight__avt-caption">Animakid</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Hightlight area at tablet, desktop view -->
+            <div class="content-hightlight__td">
+                <picture class="content-hightlight__td__image">
+                    <source class="content-hightlight__td__image-top2" media="screen and (min-width:1280px)" srcset="../assets/img/{{ item.imageLink3 }}.png" alt="{{ item.imageDesc3 }}"/>  
+                    <source class="conten-hightlight__td__image-top1" media="(min-width:834px)" srcset="../assets/img/{{ item.imageLink2 }}.png" alt="{{ item.imageDesc2 }}"/>
+                    <img class="conten-hightlight__td__image-top" src="../assets/img/{{ item.imageLink1 }}.png" alt="{{ item.imageDesc1 }}">
+                </picture>
+
+                <div class="content-hightlight__td__avt">
+                    <h5>Space Working</h5>
+
+                    <div class="content-hightlight__td__avt-cap">
+                        <img class="content-hightlight__avt-i" src="../assets/img/{{ item.imageAvatar }}.png" alt="item.imageDesc4">
+                        <p class="content-hightlight__avt-caption">Animakid</p> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finishing content area -->
+            
+            <!-- Make a button for at mobile view-->
+
+            <div class="content-button">
+                <include src="./components/button.html" locals='{
+                    "list":[{"linkIcon":"{{ item.buttonLink }}", "content":"{{ item.buttonContent }}"}]
+                }'>
+                </include>
+            </div>
+
+            <!-- Finishing button -->
+
+            <!-- Make the additionnal content - bottom of a box at mobile view-->
+            <div class="content-bottom">
+                <div class="content-bottom-h">
+                    <h4 class="content-bottom-h__h4">{{ item.heading1 }}</h4>
+                    <p class="content-bottom-h__p1">{{ item.p1 }}</p>
+                </div>
+                
+                <div class="content-bottom-h">
+                    <h4 class="content-bottom-h__h4">{{ item.heading2}}</h4>
+                    <p class="content-bottom-h__p1">{{ item.p2 }}</p>
+                </div>
+
+                <div class="content-bottom-h">
+                    <h4 class="content-bottom-h__h4">{{ item.heading3 }}</h4>
+                    <p class="content-bottom-h__p1">{{ item.p3 }}</p>
+                </div>
+            </div>
+
+            <!-- Finishing the additionnal content - bottom of a box at mobile view -->
+        </div>
+    <!-- End of content in a box -->
+</each>

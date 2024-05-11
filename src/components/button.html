@@ -1,0 +1,8 @@
+<!-- Make a button in a hero section of header bottom area -->
+
+<each loop="item in {{ list }}">
+    <button class="btn">
+            <img src="../assets/icon/{{ item.linkIcon }}.svg" alt="{{ item.linkDesc }}">
+            <p class="btn-content">{{ item.content }}</p>
+    </button>
+</each>
