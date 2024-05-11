@@ -1,20 +1,20 @@
 @use "../abstracts/" as *;
 
 .subscribe-container {
-    @include flex ($display: flex, $direction: column, $gap: 30px);
+    @include flex ($direction: column, $gap: 30px);
     width: 315px;
 
     @include tablet {
         width: 690px;
-        @include flex ($display: flex, $direction: row, $justify: center, $gap: 30px);    
+        @include flex ($direction: row, $justify: center, $gap: 30px);    
     }
 
     @include desktop {
         width: 1050px;
-        @include flex ($display: flex, $direction: row, $justify: center, $gap: 30px);    
+        @include flex ($direction: row, $justify: center, $gap: 30px);    
     }
     .content {
-        @include flex ($display: flex, $direction: column, $gap: 40px);
+        @include flex ($direction: column, $gap: 40px);
 
         @include tablet {
             width: 300px;
@@ -26,7 +26,7 @@
         
         &-heading {
             @include color ($color: #FFFFFF);
-            @include flex ($display: flex, $direction: column, $align: flex-start, $gap: 10px);
+            @include flex ($direction: column, $align: flex-start, $gap: 10px);
             align-self: stretch;
             h4 {
                 @include font ($font-family: $third-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
@@ -38,7 +38,7 @@
         }
 
         .form  {
-            @include flex ($display: flex, $direction: column, $gap: 16px);
+            @include flex ($direction: column, $gap: 16px);
 
             @include desktop {
                 padding: 16px 0px 16px 20px;
@@ -46,7 +46,7 @@
                 height: 60px;
                 @include background (#FFFFFF);
                 @include border ($border-radius: 20px);
-                @include flex ($display: flex, $direction: row, $align: center, $justify: center, $gap: 12px);
+                @include flex ($direction: row, $align: center, $justify: center, $gap: 12px);
             }
             
             input {  
@@ -63,7 +63,7 @@
                 display: none;
 
                 @include desktop {
-                    @include flex ($display: flex, $direction: row);
+                    @include flex ($direction: row);
                     padding: 0;
                     @include border ($border: none, $border-radius: 0px);
                     outline: none;
@@ -80,7 +80,7 @@
                 height: 46px;
                 padding: 0px 50px;
                 @include border ($border: 0px, $border-radius: 20px);
-                @include flex ($display: flex, $align: center, $justify: center, $direction: row, $gap: 12px);
+                @include flex ($align: center, $justify: center, $direction: row, $gap: 12px);
                 p {
                     @include font ($font-family: $third-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
                 }
