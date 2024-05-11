@@ -3,7 +3,7 @@
 // Setup style rules for how it works section
 .how-it-work {
     padding: 40px 195px;
-    @include flex ($display: flex, $direction: column, $align: center, $justify: center, $gap: 40px);
+    @include flex ($direction: column, $align: center, $justify: center, $gap: 40px);
 
     @include desktop {
         padding: 80px 195px;

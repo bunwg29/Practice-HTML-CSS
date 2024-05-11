@@ -2,7 +2,7 @@
 // Setup style rules for heading
 
 .heading {
-    @include flex ($display: flex, $direction: column, $gap: 10px);
+    @include flex ($direction: column, $gap: 10px);
 
     h4 {
         @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
@@ -30,20 +30,20 @@
 .how-it-works-card {
     width: 315px;
    
-    @include flex ($display: flex, $direction: column, $gap: 20px);
+    @include flex ($direction: column, $gap: 20px);
 
     // In tablet mode
     @include tablet {
         width: 690px;
         height: 337px;
-        @include flex ($display: flex, $direction: row, $gap: 30px);
+        @include flex ($direction: row, $gap: 30px);
     }
 
     // In desktop mode
     @include desktop {
         width: 1050px;
         height: 439px;
-        @include flex ($display: flex, $direction: row, $gap: 30px);
+        @include flex ($direction: row, $gap: 30px);
     }
 
     // Setup style rules for info card
@@ -57,7 +57,7 @@
         }
         @include background (#3B3B3B);
         @include border ($border-radius: 20px); 
-        @include flex ($display: flex, $direction: row, $justify: space-between, $align: center, $gap: 20px);
+        @include flex ($direction: row, $justify: space-between, $align: center, $gap: 20px);
         
         // In mobile mode
         @include tablet {
@@ -66,7 +66,7 @@
             &:nth-child(2) {
                 height: 100%;
             }
-            @include flex ($display: flex, $direction: column, $gap: 20px);
+            @include flex ($direction: column, $gap: 20px);
         }
 
         @include desktop {
@@ -76,7 +76,7 @@
             &:nth-child(2) {
                 height: 100%;
             }
-            @include flex ($display: flex, $direction: column, $gap: 20px);
+            @include flex ($direction: column, $gap: 20px);
         }
         picture {
             img {
@@ -96,7 +96,7 @@
         }
 
         .info-card-content {
-            @include flex ($display: flex, $direction: column, $align: center, $gap: 10px);
+            @include flex ($direction: column, $align: center, $gap: 10px);
             @include color ($color: #FFFFFF);
             h5 {
                 @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 600, $line-height: 22.4px);
