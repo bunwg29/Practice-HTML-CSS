@@ -1,0 +1,14 @@
+@use "abstracts/" as *;
+// Setup style rules for top creator section in page
+.top-creator {
+    @include flex ($direction: column, $align: center, $gap: 40px);
+    align-self: stretch;
+    height: auto;
+    mix-blend-mode: normal;
+    padding: 40px 195px;
+    position: relative;
+
+    @include tablet {
+        padding: 40px, 195px;
+    }
+}
