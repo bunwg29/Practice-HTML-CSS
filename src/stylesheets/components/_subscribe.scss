@@ -1,0 +1,96 @@
+@use "../abstracts/" as *;
+
+.subscribe-container {
+    @include flex ($direction: column, $gap: 30px);
+    width: 315px;
+
+    @include tablet {
+        width: 690px;
+        @include flex ($direction: row, $justify: center, $gap: 30px);    
+    }
+
+    @include desktop {
+        width: 1050px;
+        @include flex ($direction: row, $justify: center, $gap: 30px);    
+    }
+    .content {
+        @include flex ($direction: column, $gap: 40px);
+
+        @include tablet {
+            width: 300px;
+        }
+
+        @include desktop {
+            width: 425px;
+        }
+        
+        &-heading {
+            @include color ($color: #FFFFFF);
+            @include flex ($direction: column, $align: flex-start, $gap: 10px);
+            align-self: stretch;
+            h4 {
+                @include font ($font-family: $third-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
+            }
+
+            p {
+                @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+            }
+        }
+
+        .form  {
+            @include flex ($direction: column, $gap: 16px);
+
+            @include desktop {
+                padding: 16px 0px 16px 20px;
+                width: 425px;
+                height: 60px;
+                @include background (#FFFFFF);
+                @include border ($border-radius: 20px);
+                @include flex ($direction: row, $align: center, $justify: center, $gap: 12px);
+            }
+            
+            input {  
+                height: 46px;
+                padding: 16px 20px;
+                @include border ($border-radius: 20px);
+                outline: none;
+                @include desktop {
+                    display: none;
+                }
+            }
+
+            .input-desktop {
+                display: none;
+
+                @include desktop {
+                    @include flex ($direction: row);
+                    padding: 0;
+                    @include border ($border: none, $border-radius: 0px);
+                    outline: none;
+                    width: 182px;
+                    height: 22px;
+                }
+            }
+            ::placeholder {
+                color: #2B2B2B;
+                @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+            }
+
+            .button {
+                height: 46px;
+                padding: 0px 50px;
+                @include border ($border: 0px, $border-radius: 20px);
+                @include flex ($align: center, $justify: center, $direction: row, $gap: 12px);
+                p {
+                    @include font ($font-family: $third-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+                }
+                @include background (#A259FF);
+                @include color (#FFFFFF); 
+                @include desktop {
+                    height: 60px;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
