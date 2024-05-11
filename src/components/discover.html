@@ -1,0 +1,117 @@
+<!-- This is a box containing content inside a discover sectio -->
+<each loop="item in {{ list }}">
+
+    <!-- Heading and button in box -->
+    <div class="heading">
+        <div class="heading-content">
+            <h3>Discover More NFTs</h3>
+            <p>Explore new trending NFTs</p>
+        </div>
+        
+        <div class="heading-button">
+            <include src="./components/buttonDiscover.html" locals='{
+                "list" : [{ "buttonDiscover" : "{{ item.buttonDiscover }}"}]
+            }'>
+        </div>
+    </div>
+    <!-- End of heading ad button in box content -->
+
+    <!-- Card container in this content -->
+    <div class="card-discover-container">
+        <!-- Card 1 -->
+        <div class="card-1">
+            <div class="top-content-card">
+                <img src="../assets/img/pic-discover/{{ item.imageCard1 }}.png">
+            </div>
+
+            <div class="bottom-content-card">
+                <div class="heading">
+                    <h5>Distant Galaxy</h5>
+                    <div class="heading-describe">
+                        <img src="../assets/img/pic-top-creator/{{ item.imageAvt1 }}.png">
+                        <p>MoonDancer</p>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <div class="additional-info__1">
+                        <h6>Price</h6>
+                        <p>1.63 ETH</p>
+                    </div>
+                    <div class="additional-info__2">
+                        <h6>Highest Bid</h6>
+                        <p>0.33 wETH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End card 1 -->
+
+        <!-- Card 2 -->
+        <div class="card-1">
+            <div class="top-content-card">
+                <img src="../assets/img/pic-discover/{{ item.imageCard2 }}.png">
+            </div>
+
+            <div class="bottom-content-card">
+                <div class="heading">
+                    <h5>Life on Edena</h5>
+                    <div class="heading-describe">
+                        <img src="../assets/img/pic-top-creator/{{ item.imageAvt2 }}.png">
+                        <p>NebulaKid</p>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <div class="additional-info__1">
+                        <h6>Price</h6>
+                        <p>1.63 ETH</p>
+                    </div>
+                    <div class="additional-info__2">
+                        <h6>Highest Bid</h6>
+                        <p>0.33 wETH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End card 2 -->
+
+        <!-- Card 3 -->
+        <div class="card-special">
+            <div class="top-content-card">
+                <img src="../assets/img/pic-discover/{{ item.imageCard3 }}.png">
+            </div>
+
+            <div class="bottom-content-card">
+                <div class="heading">
+                    <h5>AstroFiction</h5>
+                    <div class="heading-describe">
+                        <img src="../assets/img/pic-top-creator/{{ item.imageAvt3 }}.png">
+                        <p>Spaceone</p>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <div class="additional-info__1">
+                        <h6>Price</h6>
+                        <p>1.63 ETH</p>
+                    </div>
+                    <div class="additional-info__2">
+                        <h6>Highest Bid</h6>
+                        <p>0.33 wETH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End card 3 -->
+
+        <div class="heading-button-mobile">
+            <include src="./components/buttonDiscover.html" locals='{
+                "list" : [{ "buttonDiscover" : "{{ item.buttonDiscover }}"}]
+            }'>
+        </div>
+    </div>
+</each>

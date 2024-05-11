@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+// Setup style rules for button of discover section
+.button-discover {
+
+    width: 100%;
+    padding: 0px 50px;
+    @include border ($border: 2px, $border-radius: 20px);
+    @include background (#2B2B2B);
+    border-style: solid;
+    border-color: #A259FF;
+    color: #FFFFFF;
+    p {
+        @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 600, $line-height: 22.4px);
+    }
+    
+    @include flex ($align: center, $justify: center, $gap: 12px);
+    height: 60px;
+    
+    @include effect();
+}
