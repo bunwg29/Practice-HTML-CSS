@@ -32,7 +32,10 @@
 
     .button-TD {
         display: none;
-
+        p {
+            text-wrap: nowrap;
+            @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 600, $line-height: 22.4px);
+        }
         @include tablet {
             @include flex ($direction: row, $align: center, $gap: 12px);
         }

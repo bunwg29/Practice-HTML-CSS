@@ -1,0 +1,11 @@
+@use "abstracts/" as *;
+
+.browse-categories {
+    padding: 40px 195px;
+    @include flex ($direction: column, $align: center, $gap: 40px);
+
+    @include desktop {
+        padding:  80px 195px;
+        @include flex ($direction: column, $align: center, $gap: 40px);
+    }
+}
