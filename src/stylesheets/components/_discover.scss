@@ -1,7 +1,8 @@
 @use "../abstracts/" as *;
 
 // Setup style rules for heading
-.heading {
+.heading-discover {
+    color: #FFFFFF;
     h3 {
         @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
     }
@@ -12,7 +13,11 @@
     @include tablet {
         width: 690px;
         @include flex ($justify: space-between, $direction: row, $gap: 30px);
-        
+    }
+
+    @include desktop {
+        width: 1050px;
+        @include flex ($justify: space-between, $direction: row, $gap: 30px);
     }
 
     &-button {
