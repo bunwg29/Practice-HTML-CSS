@@ -1,0 +1,65 @@
+@use "../abstracts/" as *;
+
+// Start setup style rules for the header section
+.header-container {
+    width: 100%;
+    @include color ($color: $text-color-varables, $background: $background-color);
+
+    // Start setup style rules for navigation
+
+    .header-top {
+        width: 100%;
+        padding: 15px 30px;
+        @include flex ($justify: space-between, $align: center);
+        
+        @include tablet{
+            padding: 15px 50px;
+            width: 100%;
+        }
+
+        @include desktop{
+            padding: 20px 50px;
+        }
+        
+        &__logo{
+            figure {
+                margin: 0;
+                @include flex ($align: center, $gap: 15px);
+                @include font ($font-family: $fourth-font, $font-size: 20px, $font-weight: 650);
+            }
+
+            figcaption {
+                @include font ($font-family: $fourth-font, $font-size: pxToRem(16));
+
+                @include tablet {
+                    @include font ($font-family: $fourth-font, $font-size: pxToRem(22));
+                }
+
+                @include desktop {
+                    @include font ($font-family: $fourth-font, $font-size: pxToRem(28));
+                }
+            }
+        }
+
+        .nav-container {
+            width: 100%;
+            display: none;  
+
+            @include desktop {
+                display: block;
+                width: 607px;
+            }
+
+        }
+        &__menu {
+            @include desktop {
+                display: none;
+            }
+        }   
+    }
+
+    // Finish of setup style rules for navigation
+
+}
+
+// Finishing setup style rules for the header section

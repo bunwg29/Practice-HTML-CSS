@@ -1,0 +1,34 @@
+@use "../abstracts/" as *;
+
+.nav-container{
+    
+    ul{
+        width: 607px;
+        height: 60px;
+        list-style-type: none;
+        @include flex ($justify:center, $align:center, $gap:10px);
+        .nav__item {
+            &-link {
+                padding: 0px 20px 0px 20px;
+                @include font($font-family:$primary-font, $font-size:pxToRem(16), $font-weight:600, $line-height: 22.4px);
+                @include color($color:$text-color-varables);
+                text-decoration: none;
+            
+               
+            }
+
+            @include effect();
+        }
+    }
+    button {
+        width: 152px;
+        height: 60px;
+        padding: 0px, 30px, 0px, 30px;
+        @include flex ($justify:center, $align: center, $gap: 12px);
+        @include font ($font-family: $primary-font, $font-size: 16px, $font-weight: 600);
+        @include border ($border-radius: 20px, $border: 0);
+        @include color ($color: #FFFFFF, $background: #A259FF);
+        
+        @include effect();
+    }   
+}
