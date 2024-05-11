@@ -65,7 +65,7 @@
     // Next 4 card
     .card-1 {
         height: 209px;
-        @include flex ($display: flex, $direction: column);
+        @include flex ($direction: column);
         position: relative;
         
         @include border ($border-radius: 20px);
@@ -140,7 +140,7 @@
             position: absolute;
             top: 0px;
             left: 0px;
-            @include flex ($display: flex, $align: center, $justify: center);
+            @include flex ($align: center, $justify: center);
             @include tablet {
                 width: 150px;
                 height: 100%;

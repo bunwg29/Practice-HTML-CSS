@@ -13,16 +13,8 @@
         @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 600, $line-height: 22.4px);
     }
     
-    @include flex ($display: flex, $align: center, $justify: center, $gap: 12px);
+    @include flex ($align: center, $justify: center, $gap: 12px);
     height: 60px;
-
-    // Effect of items
-    & {
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
-    &:hover {
-        transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-    }
+    
+    @include effect();
 }
