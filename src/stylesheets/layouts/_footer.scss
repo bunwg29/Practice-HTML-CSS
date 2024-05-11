@@ -1,0 +1,173 @@
+@use "../abstracts/" as *;
+
+// Setup style rules for footer section
+footer {
+    @include flex ($direction: column, $align: center, $justify: center, $gap: 30px);
+    padding: 40px 195px;
+    // Setup style rules for footer info
+    .footer-info {
+        width: 315px;
+        @include flex ($direction: column, $gap: 30px);
+
+        @include tablet {
+            width: 690px;
+        }
+        
+        @include desktop {
+            width: fit-content;
+            @include flex ($direction: row, $justify: space-between, $gap: 0px);
+        }
+
+        // Set padding and width of main content when in desktop mode
+        .footer-info-marketplace {
+            @include desktop {
+                width: 327px;
+                padding: 0px 84px 0px 0px;
+            }
+        }
+
+        .footer-info-explore {
+            @include desktop {
+                width: 240px;
+            }
+        }
+
+        .footer-info-subscribe {
+            @include desktop {
+                width: 420px;
+            }
+        }
+        // Style rules of three main content of footer
+        .footer-info-marketplace, .footer-info-explore, .footer-info-subscribe {
+            @include flex ($direction: column, $gap: 20px);
+
+           .main-info, .main-info-input {
+                @include flex ($direction: column, $gap: 20px);
+                @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+                color: #CCCCCC;
+
+                .icon {
+                    @include flex ($direction: column, $gap: 15px); 
+
+                    &-list {
+                        height: 32px;
+                    }
+                }
+           }
+        }
+
+        // Heading of each main content
+        .info-heading {
+            @include flex ($direction: row, $align: center, $gap: 10px);
+            @include font ($font-family: $fourth-font, $font-size: pxToRem(22), $font-weight: 700, $line-height: 35.2px);
+            color: #FFFFFF;
+        }
+        
+        // Content 3th of three main content of footer
+        .main-info-input {
+            // Style rules for form of this 
+            .form {
+                color: #FFFFFF;
+                @include font ($font-family: $third-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
+                @include flex ($direction: column, $gap: 16px);
+
+                @include tablet {
+                    padding: 16px 0px 16px 20px;
+                    @include background (#FFFFFF);
+                    @include border ($border-radius: 20px);
+                    width: 420px;
+                    height: 60px;
+                    @include flex ($direction: row, $align: center);
+                }
+
+                @include desktop {
+                    padding: 16px 0px 16px 20px;
+                    @include background (#FFFFFF);
+                    @include border ($border-radius: 20px);
+                    width: 420px;
+                    height: 60px;
+                    @include flex ($direction: row, $align: center);
+                }
+                .form-tablet-desktop {
+                    display: none;
+
+                    @include tablet {
+                        display: block;
+                        width: 209px;
+                        height: 22px;
+                        outline: none;
+                        border: none;
+                        
+                    }
+
+                    @include desktop {
+                        display: block;
+                        width: 209px;
+                        height: 22px;
+                        outline: none;
+                        border: none;
+                        
+                    }
+                }
+                
+                .from-mobile {
+                    height: 46px;
+                    padding: 16px 20px;
+                    @include border ($border-radius: 20px);
+                    outline: none;
+
+                    @include tablet { display: none; }
+                    @include desktop { display: none; }
+                }
+
+                &-button {
+                    
+                    padding: 0px 50px;
+                    height: 46px;
+                    @include flex ($direction: row, $align: center, $justify: center, $gap: 12px);
+                    @include background (#A259FF);
+                    @include border ($border-radius: 20px);
+
+                    @include tablet {
+                        height: 60px;
+                    }
+
+                    @include desktop {
+                        height: 60px;
+                    }
+
+                    // Effect of items
+                    & {
+                        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                        -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                    }
+                    &:hover {
+                        transform: scale(0.9);
+                        -webkit-transform: scale(0.9);
+                    }
+                }
+            }
+          
+        }
+    }
+    // Style rules for frame. This is last content of footer
+    .frame {
+        width: 315px;
+        @include tablet {
+            width: 690px;
+        }
+
+        @include desktop {
+            width: 1050px;
+        }
+        @include flex ($direction: column, $gap: 20px);
+        @include font ($font-family: $primary-font, $font-size: pxToRem(12), $font-weight: 400, $line-height: 13.2px);
+        color: #CCCCCC;
+        hr {
+            width: 100%;
+            margin: 0px;
+            color: #CCCCCC;
+            border-width: 0.5px;
+        }
+    }
+}

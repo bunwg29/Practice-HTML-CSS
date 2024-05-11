@@ -2,13 +2,13 @@
 <each loop="item in {{ list }}">
 
     <!-- Heading and button in box -->
-    <div class="heading">
+    <div class="heading-discover">
         <div class="heading-content">
             <h3>Discover More NFTs</h3>
             <p>Explore new trending NFTs</p>
         </div>
         
-        <div class="heading-button">
+        <div class="heading-discover-button">
             <include src="./components/buttonDiscover.html" locals='{
                 "list" : [{ "buttonDiscover" : "{{ item.buttonDiscover }}"}]
             }'>

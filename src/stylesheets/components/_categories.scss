@@ -52,14 +52,7 @@
             width: 240px;
         }
 
-        & {
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        }
-        &:hover {
-            transform: scale(0.9);
-            -webkit-transform: scale(0.9);
-        }
+        @include effect();
     }
     
     // Next 4 card
@@ -80,28 +73,14 @@
             height: 316px;
             width: 240px;
         }
-        & {
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        }
-        &:hover {
-            transform: scale(0.9);
-            -webkit-transform: scale(0.9);
-        }
+        @include effect();
     }
 
     // 7th card: Specical card to design in three responsive mode
     .card-7 {
         @include border ($border-radius: 20px);
         background-color: #3B3B3B;
-        & {
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        }
-        &:hover {
-            transform: scale(0.9);
-            -webkit-transform: scale(0.9);
-        }
+        @include effect();
     }
 
     .top-content {
