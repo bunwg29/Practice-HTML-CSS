@@ -10,17 +10,17 @@
     @include tablet {
         position: relative;
         width: 690px;
-        @include flex ($display: flex, $direction: row, $align: flex-end, $gap: 100px);
+        @include flex ($direction: row, $align: flex-end, $gap: 100px);
     }
 
     @include desktop {
         position: relative;
         width: 1050px;
-        @include flex ($display: flex, $direction: row, $align: flex-end, $justify: space-between, $gap: 100px);
+        @include flex ($direction: row, $align: flex-end, $justify: space-between, $gap: 100px);
     }
 
     .text {
-        @include flex ($display: flex, $direction: column, $align: flex-start, $gap: 10px);
+        @include flex ($direction: column, $align: flex-start, $gap: 10px);
         h4 {
             @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
         }
@@ -34,11 +34,11 @@
         display: none;
 
         @include tablet {
-            @include flex ($display: flex, $direction: row, $align: center, $gap: 12px);
+            @include flex ($direction: row, $align: center, $gap: 12px);
         }
     
         @include desktop {
-            @include flex ($display: flex, $direction: row, $align: center, $gap: 12px);
+            @include flex ($direction: row, $align: center, $gap: 12px);
         }
     
     }
@@ -48,7 +48,7 @@
 .card-container {
     // In mobile mode
     width: 100%;
-    @include flex ($display: flex, $direction: column, $align: flex-start, $gap: 20px);
+    @include flex ($direction: column, $align: flex-start, $gap: 20px);
     background-color: transparent;
     position: relative;
     width: 315px;
@@ -72,7 +72,7 @@
     
     // Style rules for first 5 cards
     .card-1, .card-2, .card-3, .card-4, .card-5, .card-6, .card-7, .card-8, .card-9, .card-10, .card-11, .card-12  {
-        @include flex ($display: flex, $align: flex-start, $gap: 20px);
+        @include flex ($align: flex-start, $gap: 20px);
         align-self: stretch;
         padding: 20px;
         position: relative;
@@ -82,7 +82,7 @@
         @include desktop {
             width: 240px;
 
-            @include flex ($display: flex, $direction: column);
+            @include flex ($direction: column);
             align-items: center;
         }
         
@@ -99,7 +99,7 @@
         display: none;
 
         @include tablet {
-            @include flex ($display: flex, $align: flex-start, $gap: 20px);
+            @include flex ($align: flex-start, $gap: 20px);
             align-self: stretch;
             padding: 20px;
             position: relative;
@@ -111,7 +111,7 @@
             border-radius: 20px;
             padding: 20px;
             @include color ($background: #3B3B3B);
-            @include flex ($display: flex, $direction: column, $align: center, $gap: 20px);
+            @include flex ($direction: column, $align: center, $gap: 20px);
             width: 240px;
         }
     }
@@ -125,7 +125,7 @@
             padding: 20px;
             @include color ($background: #3B3B3B);
             width: 240px;
-            @include flex ($display: flex, $direction: column, $align: center, $gap: 20px);
+            @include flex ($direction: column, $align: center, $gap: 20px);
         }
     }
 
@@ -133,7 +133,7 @@
 
     // Right content of card
     .right-card_1 {
-        @include flex ($display: flex, $align: flex-start);
+        @include flex ($align: flex-start);
         position: relative;
         img {
             width: 60px;
@@ -148,7 +148,7 @@
 
     // Left content of card
     .left-card {
-        @include flex ($display: flex, $direction: column, $gap: 5px);
+        @include flex ($direction: column, $gap: 5px);
         h5 {
             @include font ($font-family: $primary-font, $font-size: pxToRem(22), $font-weight: 600, $line-height: 30.8px);
             @include color ($color: #FFFFFF);
@@ -165,7 +165,7 @@
                 @include color ($color: #FFFFFF);
             }
 
-            @include flex ($display: flex, $gap: 5px);
+            @include flex ($gap: 5px);
         }
     }
 
@@ -178,14 +178,14 @@
             position: absolute;
             top: 12px;
             left: 13px;
-            @include flex ($display: flex, $align: center, $justify: center);
+            @include flex ($align: center, $justify: center);
     } 
 }
 
 // Set style rules for button mobile
 .button-mobile {
     width: 100%;
-    @include flex ($display: flex, $direction: row, $align: center, $justify: center, $gap: 100px);
+    @include flex ($direction: row, $align: center, $justify: center, $gap: 100px);
 
     @include tablet {
         display: none;
