@@ -3,6 +3,5 @@
 .trending {
     padding: 40px 0px;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    @include flex ($direction: row, $justify: center, $align: center);
 }
