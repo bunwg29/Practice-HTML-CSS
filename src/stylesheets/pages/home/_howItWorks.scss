@@ -2,11 +2,15 @@
 
 // Setup style rules for how it works section
 .how-it-work {
-    padding: 40px 195px;
+    padding: 40px 0px;
     @include flex ($direction: column, $align: center, $justify: center, $gap: 40px);
+
+    @include tablet {
+        padding: 40px 195px;
+    }
 
     @include desktop {
         padding: 80px 195px;
-        gap: 40px;
+        gap: 48px;
     }
 }
