@@ -1,7 +1,11 @@
 @use "abstracts/" as *;
 
 .trending {
-    padding: 40px 195px;
+    padding: 40px 0px;
     width: 100%;
     @include flex ($direction: row, $justify: center, $align: center);
+
+    @include desktop {
+        padding: 80px 0px;
+    }
 }

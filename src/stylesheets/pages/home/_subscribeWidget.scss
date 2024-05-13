@@ -3,7 +3,7 @@
 // Setup style rules for subscribe widget section
 
 .subscribe-widget {
-    padding: 40px 195px;
+    padding: 40px 0px;
     @include flex ($direction: column, $justify: center, $align: center, $gap: 40px);
 
     @include tablet {

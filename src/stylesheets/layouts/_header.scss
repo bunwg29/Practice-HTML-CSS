@@ -65,7 +65,7 @@
     .header-bottom {
         position: relative;
         width: 100%;
-        padding: 40px 195px;
+        padding: 40px 0px;
         @include flex ($direction: row, $align: center, $justify: center, $gap: 30px);
        
         @include tablet {

@@ -1,26 +1,20 @@
 {
-  "devDependencies": {
-    "posthtml-doctype": "^1.1.1",
-    "posthtml-include": "^2.0.1",
-    "sass": "^1.75.0"
-  },
   "name": "practice-html-css",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project describes process practice in HTML and CSS knowledge.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./src/pages/index.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bunwg29/Practice-HTML-CSS.git"
+    "test": "jest",
+    "dev": "parcel ./src/pages/index.html",
+    "build": "parcel build ./src/pages/index.html --out-dir public"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bunwg29/Practice-HTML-CSS/issues"
-  },
-  "homepage": "https://github.com/bunwg29/Practice-HTML-CSS#readme",
-  "keywords": []
+  "devDependencies": {
+    "cssnano": "^7.0.1",
+    "postcss": "^8.4.38",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^2.0.1",
+    "sass": "^1.77.1"
+  }
 }
