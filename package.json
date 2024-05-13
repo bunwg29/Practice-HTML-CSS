@@ -1,20 +1,27 @@
 {
   "name": "practice-html-css",
   "version": "1.0.0",
-  "description": "This project describes process practice in HTML and CSS knowledge.",
+  "description": "This project to practice knowledge relative to HTML & CSS",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "dev": "parcel ./src/pages/index.html",
-    "build": "parcel build ./src/pages/index.html --out-dir public"
+    "build": "parcel build ./src/pages/index.html --out-dir public",
+    "lint": "eslint src",
+    "test": "jest"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cssnano": "^7.0.1",
-    "postcss": "^8.4.38",
+    "eslint": "^8.52.0",
+    "husky": "^7.0.0",
+    "parcel-bundler": "^1.12.5",
     "posthtml-doctype": "^1.1.1",
-    "posthtml-include": "^2.0.1",
-    "sass": "^1.77.1"
+    "posthtml-include": "^1.7.4",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.10.0",
+    "posthtml": "^0.16.6"
   }
 }
