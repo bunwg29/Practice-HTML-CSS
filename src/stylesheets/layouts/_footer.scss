@@ -3,7 +3,7 @@
 // Setup style rules for footer section
 footer {
     @include flex ($direction: column, $align: center, $justify: center, $gap: 30px);
-    padding: 40px 195px;
+    padding: 40px 0px;
     // Setup style rules for footer info
     .footer-info {
         width: 315px;
