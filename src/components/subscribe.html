@@ -1,9 +1,9 @@
 <each loop="item in {{ list }}">
     <div class="subscribe-container">
         <picture class="image-space">
-            <source media="screen and (min-width: 1200px)" srcset="../assets/img/{{ item.imageDesktop }}.png">
-            <source media="(min-width:429px)" srcset="../assets/img/{{ item.imageTablet }}.png">
-            <img src="../assets/img/{{ item.imageMobile }}.png"> 
+            <source media="screen and (min-width: 1200px)" srcset="../assets/img/{{ item.imageDesktop }}.png" alt="{{ item.spaceDesc }}">
+            <source media="(min-width:429px)" srcset="../assets/img/{{ item.imageTablet }}.png" alt="{{ item.spaceDesc }}">
+            <img src="../assets/img/{{ item.imageMobile }}.png" alt="{{ item.spaceDesc }}"> 
         </picture>
 
         <div class="content">
@@ -17,7 +17,7 @@
                 <input type="text" placeholder="Enter Your Email Address">
                 <input class="input-desktop" type="text" placeholder="Enter your email here">
                 <div class="button">
-                    <img src="../assets/icon/{{ item.iconButton }}.svg" alt="">
+                    <img src="../assets/icon/{{ item.iconButton }}.svg" alt="iconButton">
                     <p>Subscribe</p>
                 </div>
             </div>

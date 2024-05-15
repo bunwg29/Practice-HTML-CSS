@@ -1,19 +1,18 @@
 <each loop="item in {{ list }}">
     <div class="background">
         <picture>
-              
-            <source  media="(min-width:429px)" srcset="../assets/img/{{ item.backgroundTablet }}.png"/>
-            <source  media="screen and (min-width:1200px)" srcset="../assets/img/{{ item.backgroundDesktop }}.png"/> 
-            <img src="../assets/img/{{ item.background }}.png"> 
-        </picture>
-             
+            <source  media="(min-width:429px)" srcset="../assets/img/{{ item.backgroundTablet }}.png" alt=" {{item.backgroundDesc }}"/>
+            <source  media="screen and (min-width:1200px)" srcset="../assets/img/{{ item.backgroundDesktop }}.png" alt=" {{item.backgroundDesc }}"/> 
+            <img src="../assets/img/{{ item.background }}.png" alt=" {{item.backgroundDesc }}"> 
+        </picture>     
     </div>
+
     <!-- Content of hightlight section -->
     <div class="inside-background">
         <div class="content">
             <div class="content-top">
                 <div class="top">
-                    <img src="../assets/img/pic-top-creator/{{ item.avttop }}.png">
+                    <img src="../assets/img/pic-top-creator/{{ item.avttop }}.png" alt="{{ item.avtTopDesc }}">
                     <p>Shroomie</p>
                 </div>
         
@@ -23,7 +22,7 @@
 
                 <div class="button-bottom-tablet">
                     <button class="button-see-nft">
-                        <img src="../assets/icon/{{ item.iconButton }}.svg">
+                        <img src="../assets/icon/{{ item.iconButton }}.svg" alt="{{ item.iconButtonDesc}}">
                         <p>See NFT</p>
                     </button>
                 </div>
@@ -63,7 +62,7 @@
             
             <div class="button-bottom-mobile">
                 <button class="button-see-nft">
-                    <img src="../assets/icon/{{ item.iconButton }}.svg">
+                    <img src="../assets/icon/{{ item.iconButton }}.svg" alt="{{ item.iconButtonDesc}}">
                     <p>See NFT</p>
                 </button>
             </div>
