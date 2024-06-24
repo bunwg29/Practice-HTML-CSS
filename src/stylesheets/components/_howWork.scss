@@ -4,6 +4,8 @@
 .heading {
     @include flex ($direction: column, $gap: 10px);
 
+    color: $text-color-varables;
+
     h4 {
         @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
     }
@@ -13,10 +15,12 @@
     }
 
     @include tablet {
+        width: 690px;
         align-items: flex-start;
     }
 
     @include desktop {
+        width: 1050px;
         align-items: flex-start;
         h4 {
             @include font ($font-family: $primary-font, $font-size: pxToRem(38), $font-weight: 600, $line-height: 45.6px);
