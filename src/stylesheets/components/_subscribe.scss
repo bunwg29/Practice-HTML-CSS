@@ -3,13 +3,17 @@
 .subscribe-container {
     @include flex ($direction: column, $gap: 30px);
     width: 315px;
-
+    @include border ($border-radius: 20px);
     @include tablet {
+        @include background(#3B3B3B);
+        padding: 40px 30px;
         width: 690px;
         @include flex ($direction: row, $justify: center, $gap: 30px);    
     }
 
     @include desktop {
+        @include background(#3B3B3B);
+        padding: 60px;
         width: 1050px;
         @include flex ($direction: row, $justify: center, $gap: 30px);    
     }

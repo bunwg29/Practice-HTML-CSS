@@ -93,7 +93,7 @@
 // Mixin responsive websites
 
 @mixin tablet {
-    @media (min-width:$small) and (max-width: $tablet) {
+    @media (min-width: $small) and (max-width: $tablet) {
       @content;
     }
   }
