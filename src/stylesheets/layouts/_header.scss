@@ -27,7 +27,7 @@
                 @include flex ($align: center, $gap: 15px);
                 @include font ($font-family: $fourth-font, $font-size: 20px, $font-weight: 650);
             }
-
+            @include removeStyleTag();
             figcaption {
                 @include font ($font-family: $fourth-font, $font-size: pxToRem(16));
 

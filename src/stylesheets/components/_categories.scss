@@ -1,9 +1,9 @@
 @use "../abstracts/" as *;
 // Setup style rule for heading of this content
 
-.heading {
+.heading-categories {
     width: 315px;
-    color: #FFFFFF;
+    color: $text-color-varables;
     p {
         @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
     }
@@ -23,7 +23,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     grid-template-rows: repeat(3, auto) 231px;
-
+    
+    @include removeStyleTag();
     @include tablet {
         width: 690px;
         height: 470px;
@@ -63,13 +64,13 @@
         
         @include border ($border-radius: 20px);
         @include tablet {
-            background-color: #3B3B3B;
+            background-color: $background-color-second;
             height: 231px;
             width: 150px;
         }
 
         @include desktop {
-            background-color: #3B3B3B;
+            background-color: $background-color-second;
             height: 316px;
             width: 240px;
         }
@@ -79,7 +80,7 @@
     // 7th card: Specical card to design in three responsive mode
     .card-7 {
         @include border ($border-radius: 20px);
-        background-color: #3B3B3B;
+        background-color: $background-color-second;
         @include effect();
     }
 
@@ -145,7 +146,7 @@
     // Setup style rules for bottom content
     .bottom-content {
         padding: 20px 20px 25px 20px;
-        background-color: #3B3B3B;
+        background-color: $background-color-second;
         @include border ($border-radius: 0px 0px 20px 20px);
  
         @include desktop {
@@ -153,7 +154,7 @@
         }
 
         p {
-            color: #FFFFFF;
+            color: $text-color-varables;
             @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: (600), $line-height: 22.4px);
             @include desktop {
                 @include font ($font-family: $primary-font, $font-size: pxToRem(22), $font-weight: (600), $line-height: 30.8px);

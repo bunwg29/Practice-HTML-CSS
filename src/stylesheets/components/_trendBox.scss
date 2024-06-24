@@ -16,6 +16,8 @@
         width: 1050px;
         @include flex ($align: center, $direction: column, $gap: 60px);
     }
+
+    @include removeStyleTag();
     
     .title {
         width: 315px;
@@ -117,7 +119,7 @@
                 height: 95px;
                 @include flex ($justify: center, $align: center);
                 @include border ($border-radius: 20px);
-                @include color ($color: #FFFFFF, $background: #A259FF);
+                @include color ($color: $text-color-varables, $background: $background-color-button);
                 @include font ($font-family: $fourth-font, $font-size: pxToRem(16), $font-weight: 700, $line-height: 22.4px);
                 @include tablet {
                     width: 100px;

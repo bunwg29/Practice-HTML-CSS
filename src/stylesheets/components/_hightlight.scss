@@ -14,7 +14,7 @@
     position: absolute;
     padding: 120px 195px 40px;
     @include flex ($direction: column, $justify: center, $align: center);
-    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%);
+    background: $background-mushroom-blur;
 
     @include tablet {
         padding: 360px 195px 60px 195px;
@@ -38,8 +38,8 @@
                 padding: 10px 20px;
                 @include flex ( $align: center, $justify: flex-start, $direction: row, $gap: 12px);
                 @include border ($border-radius: 20px);
-                @include background (#3B3B3B);
-                color: #FFFFFF;
+                @include background ($background-color-second);
+                color: $text-color-varables;
                 width: fit-content;
                 img {
                     width: 24px;
@@ -53,7 +53,7 @@
 
             .hightlight-text {
                 h3 {
-                    color: #FFFFFF;
+                    color: $text-color-varables;
                     @include font ($font-family: $third-font, $font-size: pxToRem(38), $font-weight: 600, $line-height: 45.6px);
                 }
             }
@@ -67,10 +67,10 @@
             @include flex ($direction: column, $gap: 10px);
             padding: 30px;
             @include border ($border-radius: 20px);
-            @include background (rgba(59, 59, 59, 0.5));
+            @include background ($background-color-clock);
             backdrop-filter: blur(10px) brightness(100%);
             -webkit-backdrop-filter: blur(10px) brightness(100%);
-            @include color ($color: #FFFFFF);
+            @include color ($color: $text-color-varables);
 
             &-time {
                 @include flex ($direction: row, $justify: center, $gap: 10px);

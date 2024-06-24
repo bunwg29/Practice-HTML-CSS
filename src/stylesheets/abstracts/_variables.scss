@@ -1,15 +1,20 @@
 
 // Variables use for make responsive
 $small: 834px;
-$mobiles:calc($small - 1px);
-$medium: 768px;
 $extra-large: 1280px;
-$desktop: calc($extra-large + 0px);
+$desktop: $extra-large;
 $tablet: calc($extra-large - 1px);
 //
 // Variables about color of particular section like: text color, background,...
 $background-color: #2B2B2B;
+$background-color-second: #3B3B3B;
+$background-color-button: #A259FF;
+$background-color-clock: rgba(59, 59, 59, 0.5);
+$background-mushroom-blur: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, $background-color-button 100%);
 $text-color-varables: #FFFFFF;
+$text-color-blur: #858585;
+$text-color-footer: #CCCCCC;
+
 
 
 // Variables about font style in a websites

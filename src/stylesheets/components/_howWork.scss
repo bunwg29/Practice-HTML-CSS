@@ -46,6 +46,7 @@
         @include flex ($direction: row, $gap: 30px);
     }
 
+    @include removeStyleTag();
     // Setup style rules for info card
     .info-card {
         // In mobile mode
@@ -55,7 +56,7 @@
         &:nth-child(2) {
             height: 140px;
         }
-        @include background (#3B3B3B);
+        @include background ($background-color-second);
         @include border ($border-radius: 20px); 
         @include flex ($direction: row, $justify: space-between, $align: center, $gap: 20px);
         
@@ -97,7 +98,7 @@
 
         .info-card-content {
             @include flex ($direction: column, $align: center, $gap: 10px);
-            @include color ($color: #FFFFFF);
+            @include color ($color: $text-color-varables);
             h5 {
                 @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 600, $line-height: 22.4px);
                 @include desktop {
@@ -116,12 +117,10 @@
 
         // Effect
         & {
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+           @include effect();
         }
         &:hover {
-            transform: scale(0.9);
-            -webkit-transform: scale(0.9);
+            @include effect();
         }
     }
 }

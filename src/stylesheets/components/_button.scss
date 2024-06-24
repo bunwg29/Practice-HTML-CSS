@@ -6,7 +6,7 @@
     padding: 0px 50px;
    
     @include flex ($align: center, $justify: center, $gap: 12px);
-    @include color ($color: #FFFFFF, $background: #A259FF);
+    @include color ($color: $text-color-varables, $background: $background-color-button);
     @include border ($border: 0px, $border-radius: 20px);
     text-wrap: nowrap;
 
