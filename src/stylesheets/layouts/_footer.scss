@@ -18,6 +18,8 @@ footer {
             @include flex ($direction: row, $justify: space-between, $gap: 0px);
         }
 
+        @include removeStyleTag();
+
         // Set padding and width of main content when in desktop mode
         .footer-info-marketplace {
             @include desktop {
@@ -44,7 +46,7 @@ footer {
            .main-info, .main-info-input {
                 @include flex ($direction: column, $gap: 20px);
                 @include font ($font-family: $primary-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
-                color: #CCCCCC;
+                color: $text-color-footer;
 
                 .icon {
                     @include flex ($direction: column, $gap: 15px); 
@@ -60,20 +62,20 @@ footer {
         .info-heading {
             @include flex ($direction: row, $align: center, $gap: 10px);
             @include font ($font-family: $fourth-font, $font-size: pxToRem(22), $font-weight: 700, $line-height: 35.2px);
-            color: #FFFFFF;
+            color: $text-color-varables;
         }
         
         // Content 3th of three main content of footer
         .main-info-input {
             // Style rules for form of this 
             .form {
-                color: #FFFFFF;
+                color: $text-color-varables;
                 @include font ($font-family: $third-font, $font-size: pxToRem(16), $font-weight: 400, $line-height: 22.4px);
                 @include flex ($direction: column, $gap: 16px);
 
                 @include tablet {
                     padding: 16px 0px 16px 20px;
-                    @include background (#FFFFFF);
+                    @include background ($text-color-varables);
                     @include border ($border-radius: 20px);
                     width: 420px;
                     height: 60px;
@@ -82,7 +84,7 @@ footer {
 
                 @include desktop {
                     padding: 16px 0px 16px 20px;
-                    @include background (#FFFFFF);
+                    @include background ($text-color-varables);
                     @include border ($border-radius: 20px);
                     width: 420px;
                     height: 60px;
@@ -125,7 +127,7 @@ footer {
                     padding: 0px 50px;
                     height: 46px;
                     @include flex ($direction: row, $align: center, $justify: center, $gap: 12px);
-                    @include background (#A259FF);
+                    @include background ($background-color-button);
                     @include border ($border-radius: 20px);
 
                     @include tablet {
@@ -138,12 +140,10 @@ footer {
 
                     // Effect of items
                     & {
-                        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-                        -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                        @include effect();
                     }
                     &:hover {
-                        transform: scale(0.9);
-                        -webkit-transform: scale(0.9);
+                        @include effect();
                     }
                 }
             }
@@ -162,11 +162,11 @@ footer {
         }
         @include flex ($direction: column, $gap: 20px);
         @include font ($font-family: $primary-font, $font-size: pxToRem(12), $font-weight: 400, $line-height: 13.2px);
-        color: #CCCCCC;
+        color: $text-color-footer;
         hr {
             width: 100%;
             margin: 0px;
-            color: #CCCCCC;
+            color: $text-color-footer;
             border-width: 0.5px;
         }
     }

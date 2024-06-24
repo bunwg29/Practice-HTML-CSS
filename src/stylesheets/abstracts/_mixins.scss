@@ -1,6 +1,13 @@
 @use './functions';
 @use './variables' as *;
 
+// Mixin for delete style of a tag
+@mixin removeStyleTag() {
+    a {
+        text-decoration: none;
+        color: $text-color-varables;
+    }
+}
 // Mixin for border
 
 @mixin border($border-radius:false, $border: false){

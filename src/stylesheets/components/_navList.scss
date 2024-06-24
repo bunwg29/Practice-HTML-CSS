@@ -27,7 +27,7 @@
         @include flex ($justify:center, $align: center, $gap: 12px);
         @include font ($font-family: $primary-font, $font-size: 16px, $font-weight: 600);
         @include border ($border-radius: 20px, $border: 0);
-        @include color ($color: #FFFFFF, $background: #A259FF);
+        @include color ($color: $text-color-varables, $background: $background-color-button);
         
         @include effect();
     }   

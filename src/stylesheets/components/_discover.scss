@@ -2,7 +2,7 @@
 
 // Setup style rules for heading
 .heading-discover {
-    color: #FFFFFF;
+    color: $text-color-varables;
     h3 {
         @include font ($font-family: $primary-font, $font-size: pxToRem(28), $font-weight: 600, $line-height: 39.2px);
     }
@@ -46,13 +46,15 @@
         width: 1050px;
         @include flex ($direction: row, $gap: 30px);
     }
+
+    @include removeStyleTag();
     
     // Setup style rules for each card in box including .card-special use in responsve mode
     .card-1, .card-special {
         height: 402px;
         width: 315px;
         @include flex ($direction: column, $align: center);
-        @include background (#3B3B3B);
+        @include background ($background-color-second);
         @include border ($border-radius: 20px);
 
         @include tablet {
@@ -140,9 +142,9 @@
         .additional-info {
             @include flex ($justify: space-between);
             @include font ($font-family: $fourth-font, $font-size: pxToRem(12), $font-weight: 400, $line-height: 13.2px);
-            color: #FFFFFF;
+            color: $text-color-varables;
             h6 {
-                color: #858584;
+                color: $text-color-blur;
             }
 
             @include desktop {
